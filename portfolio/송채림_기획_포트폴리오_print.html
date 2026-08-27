@@ -1,0 +1,737 @@
+<!doctype html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<title>송채림 기획 포트폴리오</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+@font-face{font-family:"Noto Sans KR";font-style:normal;font-weight:400;font-display:block;src:url("file:///root/.local/share/fonts/NotoSansKR-Regular.ttf") format("truetype");}
+@font-face{font-family:"Noto Sans KR";font-style:normal;font-weight:500;font-display:block;src:url("file:///root/.local/share/fonts/NotoSansKR-Medium.ttf") format("truetype");}
+@font-face{font-family:"Noto Sans KR";font-style:normal;font-weight:700;font-display:block;src:url("file:///root/.local/share/fonts/NotoSansKR-Bold.ttf") format("truetype");}
+@font-face{font-family:"Noto Sans KR";font-style:normal;font-weight:800;font-display:block;src:url("file:///root/.local/share/fonts/NotoSansKR-ExtraBold.ttf") format("truetype");}
+@font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:400;font-display:block;src:url("file:///root/.local/share/fonts/IBMPlexMono-Regular.ttf") format("truetype");}
+@font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:500;font-display:block;src:url("file:///root/.local/share/fonts/IBMPlexMono-Medium.ttf") format("truetype");}
+@font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:600;font-display:block;src:url("file:///root/.local/share/fonts/IBMPlexMono-SemiBold.ttf") format("truetype");}
+</style>
+</head>
+<body>
+
+<style>
+  /* ---- tokens : POP-IN 서비스 브랜드를 그대로 씀 ---- */
+  :root {
+    --ground:      #FFFFFF;
+    --panel:       #F7F8FA;
+    --card:        #FFFFFF;
+
+    --ink:         #24262D;
+    --ink-2:       #666B76;
+    --ink-3:       #9297A1;
+    --line:        #E5E7EB;
+    --line-2:      #ECEEF2;
+
+    --violet:      #7164E8;
+    --violet-deep: #6256D8;
+    --violet-wash: #F1EFFE;
+
+    --mint:        #329E94;
+    --mint-line:   #8FD6CC;
+    --mint-wash:   #EFFAF8;
+
+    --gold:        #8A6B1F;
+    --gold-line:   #EBCB84;
+    --gold-wash:   #FDF6E4;
+
+    --f-sans: "Pretendard Variable", Pretendard, "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+    --f-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground:      #14151A;
+      --panel:       #1B1D24;
+      --card:        #1E212A;
+
+      --ink:         #ECEEF3;
+      --ink-2:       #A2A8B5;
+      --ink-3:       #767D8B;
+      --line:        #2C303B;
+      --line-2:      #24272F;
+
+      --violet:      #9A8FFF;
+      --violet-deep: #B0A6FF;
+      --violet-wash: #23213A;
+
+      --mint:        #5BCFC2;
+      --mint-line:   #2E6B65;
+      --mint-wash:   #14282A;
+
+      --gold:        #E6BF6E;
+      --gold-line:   #6B5628;
+      --gold-wash:   #2A2317;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --ground:      #14151A;
+    --panel:       #1B1D24;
+    --card:        #1E212A;
+
+    --ink:         #ECEEF3;
+    --ink-2:       #A2A8B5;
+    --ink-3:       #767D8B;
+    --line:        #2C303B;
+    --line-2:      #24272F;
+
+    --violet:      #9A8FFF;
+    --violet-deep: #B0A6FF;
+    --violet-wash: #23213A;
+
+    --mint:        #5BCFC2;
+    --mint-line:   #2E6B65;
+    --mint-wash:   #14282A;
+
+    --gold:        #E6BF6E;
+    --gold-line:   #6B5628;
+    --gold-wash:   #2A2317;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--f-sans);
+    font-size: 15.5px;
+    line-height: 1.68;
+    letter-spacing: -.018em;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page { max-width: 880px; margin: 0 auto; padding: 0 28px 90px; }
+
+  h1, h2, h3, h4 { margin: 0; font-weight: 700; letter-spacing: -.035em; text-wrap: balance; line-height: 1.24; }
+  h1 { font-size: clamp(2.05rem, 5.4vw, 2.95rem); font-weight: 800; letter-spacing: -.045em; line-height: 1.1; }
+  h2 { font-size: clamp(1.5rem, 3.4vw, 1.95rem); }
+  h3 { font-size: 1.12rem; }
+  h4 { font-size: .95rem; letter-spacing: -.025em; }
+  p  { margin: 0; }
+
+  .kicker {
+    font-family: var(--f-mono);
+    font-size: 11px; letter-spacing: .16em; text-transform: uppercase;
+    font-weight: 600; color: var(--violet-deep);
+  }
+  .small { font-size: .875rem; color: var(--ink-2); }
+  .tiny  { font-size: .8rem; color: var(--ink-3); }
+  b.k { color: var(--ink); font-weight: 700; }
+
+  a { color: var(--violet-deep); text-decoration: none; }
+  a:hover { text-decoration: underline; text-underline-offset: 3px; }
+  a:focus-visible { outline: 2px solid var(--violet); outline-offset: 3px; border-radius: 4px; }
+
+  /* ---- masthead ---- */
+  .mast {
+    display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 20px;
+    padding: 34px 0 14px; border-bottom: 2px solid var(--ink);
+    font-family: var(--f-mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-3);
+  }
+  .mast .nm { color: var(--ink); font-weight: 600; letter-spacing: .1em; font-size: 12px; }
+  .gap { flex: 1 1 40px; }
+
+  /* ---- intro ---- */
+  .intro { padding: 58px 0 0; display: flex; flex-direction: column; gap: 22px; }
+  .intro h1 { max-width: 21ch; }
+  .intro .lede { font-size: 1.05rem; color: var(--ink-2); max-width: 58ch; }
+
+  .chips { display: flex; flex-wrap: wrap; gap: 7px; }
+  .chip {
+    font-family: var(--f-mono); font-size: 11px; letter-spacing: .06em;
+    padding: 6px 11px; border-radius: 999px;
+    background: var(--violet-wash); color: var(--violet-deep); font-weight: 500;
+  }
+  .chip.n { background: var(--panel); color: var(--ink-2); }
+
+  /* ---- section frame ---- */
+  section { padding-top: 68px; }
+  .shead { display: flex; flex-direction: column; gap: 9px; margin-bottom: 22px; }
+
+  /* ---- project block ---- */
+  .proj { border: 1px solid var(--line); background: var(--card); border-radius: 16px; overflow: hidden; }
+  .proj-top {
+    padding: 28px 28px 26px; border-bottom: 1px solid var(--line-2);
+    display: flex; flex-direction: column; gap: 14px;
+  }
+  .proj-top h2 { letter-spacing: -.05em; font-weight: 800; }
+  .proj-claim {
+    font-size: clamp(1.12rem, 2.5vw, 1.34rem); font-weight: 700; letter-spacing: -.038em;
+    line-height: 1.4; color: var(--ink); max-width: 34ch;
+  }
+  .proj-top .sub { font-size: .98rem; font-weight: 500; color: var(--ink-2); letter-spacing: -.028em; }
+
+  .tagrow { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tg {
+    font-family: var(--f-mono); font-size: 10.5px; letter-spacing: .07em;
+    padding: 5px 10px; border-radius: 6px;
+    background: var(--violet-wash); color: var(--violet-deep); font-weight: 600;
+  }
+
+  .specs { display: flex; flex-direction: column; gap: 5px; padding-top: 3px; border-top: 1px solid var(--line-2); margin-top: 2px; }
+  .specs { padding-top: 12px; }
+  .spec { display: flex; flex-wrap: wrap; gap: 4px 10px; font-size: .845rem; color: var(--ink-2); }
+  .spec > b {
+    font-family: var(--f-mono); font-size: 9.5px; letter-spacing: .13em; text-transform: uppercase;
+    color: var(--ink-3); font-weight: 600; min-width: 44px; padding-top: 3px;
+  }
+
+  .row { padding: 24px 28px; border-bottom: 1px solid var(--line-2); display: grid; grid-template-columns: 104px minmax(0,1fr); gap: 4px 22px; align-items: start; }
+  .row:last-child { border-bottom: 0; }
+  .row > .lbl {
+    font-family: var(--f-mono); font-size: 10.5px; letter-spacing: .13em; text-transform: uppercase;
+    color: var(--ink-3); font-weight: 600; padding-top: 4px;
+  }
+  .row > .val { min-width: 0; display: flex; flex-direction: column; gap: 13px; }
+  @media (max-width: 640px) {
+    .row { grid-template-columns: 1fr; gap: 10px; padding: 20px; }
+    .proj-top { padding: 22px 20px; }
+  }
+
+  /* ---- pivot questions ---- */
+  .qq {
+    border-left: 3px solid var(--violet);
+    padding: 3px 0 3px 15px;
+    font-size: 1.06rem; font-weight: 700; letter-spacing: -.034em; line-height: 1.48;
+    color: var(--ink); max-width: 38ch;
+  }
+  .qq.two { border-left-color: var(--gold); }
+
+  /* ---- numbered build steps ---- */
+  .bsteps { display: flex; flex-direction: column; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+  .bs { background: var(--card); padding: 16px 18px; display: grid; grid-template-columns: 26px minmax(0,1fr); gap: 3px 13px; align-items: start; }
+  .bs .bn { font-family: var(--f-mono); font-size: 11.5px; font-weight: 600; color: var(--violet-deep); padding-top: 3px; }
+  .bs .bt { font-size: .97rem; font-weight: 700; letter-spacing: -.03em; }
+  .bs .bd { grid-column: 2; font-size: .875rem; color: var(--ink-2); line-height: 1.62; }
+  .bs .bd b { color: var(--ink); font-weight: 700; }
+
+  /* ---- pipeline ---- */
+  .pipe { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .pn {
+    padding: 7px 11px; border-radius: 7px; background: var(--panel); border: 1px solid var(--line);
+    font-size: .8rem; font-weight: 700; letter-spacing: -.02em; white-space: nowrap;
+  }
+  .pn.key { background: var(--violet-wash); border-color: color-mix(in srgb, var(--violet) 30%, transparent); color: var(--violet-deep); }
+  .pn.st { background: var(--mint-wash); border-color: var(--mint-line); color: var(--mint); }
+  .parrow { color: var(--ink-3); font-size: .75rem; flex: none; }
+
+  /* ---- highlight ---- */
+  .hl {
+    border: 1px solid var(--gold-line); background: var(--gold-wash);
+    border-radius: 12px; padding: 16px 18px; display: flex; flex-direction: column; gap: 9px;
+  }
+  .hl .hk { font-family: var(--f-mono); font-size: 10px; letter-spacing: .13em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+  .hl p { font-size: .92rem; color: var(--ink); line-height: 1.62; font-weight: 700; letter-spacing: -.028em; }
+  .hl p.sub { font-weight: 400; font-size: .875rem; color: var(--ink-2); letter-spacing: -.018em; }
+  .hl .ex { display: flex; flex-wrap: wrap; gap: 7px; align-items: center; }
+  .hl .ex span {
+    font-size: .8rem; padding: 5px 10px; border-radius: 7px;
+    background: var(--card); border: 1px solid var(--gold-line); color: var(--ink-2); font-weight: 400;
+  }
+  .hl .ex span.bad { color: var(--ink-3); text-decoration: line-through; }
+  .hl .ex .arw { border: 0; background: none; color: var(--gold); padding: 0 1px; font-weight: 700; }
+
+  /* ---- result pills / numbers ---- */
+  .outs { display: flex; flex-wrap: wrap; gap: 8px; }
+  .out { padding: 9px 14px; border-radius: 10px; font-size: .875rem; font-weight: 500;
+         background: var(--mint-wash); color: var(--mint); border: 1px solid var(--mint-line); }
+  .out.v { background: var(--violet-wash); color: var(--violet-deep); border-color: color-mix(in srgb, var(--violet) 34%, transparent); }
+  .out.g { background: var(--gold-wash); color: var(--gold); border-color: var(--gold-line); }
+
+  .big {
+    font-size: clamp(1.1rem, 2.4vw, 1.28rem); font-weight: 800; letter-spacing: -.04em;
+    color: var(--violet-deep); line-height: 1.35;
+  }
+
+  /* ---- key visual ---- */
+  .kvs { display: grid; gap: 10px; }
+  @media (min-width: 660px) { .kvs { grid-template-columns: repeat(3, 1fr); } }
+  .kv { display: flex; flex-direction: column; gap: 7px; }
+  .kvframe {
+    aspect-ratio: 4 / 3; border-radius: 11px;
+    border: 1px dashed var(--line); background: var(--panel);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--ink-3); font-family: var(--f-mono); font-size: 10px; letter-spacing: .12em; text-transform: uppercase;
+  }
+  .kv .kvn { font-family: var(--f-mono); font-size: 9.5px; letter-spacing: .13em; color: var(--violet-deep); font-weight: 600; }
+  .kv .kvt { font-size: .855rem; font-weight: 700; letter-spacing: -.025em; line-height: 1.4; }
+
+  /* ---- links ---- */
+  .lks { display: flex; flex-wrap: wrap; gap: 8px; }
+  .lk { display: inline-flex; align-items: center; gap: 8px; padding: 11px 16px; border-radius: 10px;
+        font-size: .885rem; font-weight: 700; border: 1px solid var(--line); background: var(--card); color: var(--ink); }
+  .lk:hover { border-color: var(--violet); color: var(--violet-deep); text-decoration: none; }
+  .lk.pri { background: var(--violet); border-color: var(--violet); color: #fff; }
+  .lk.pri:hover { background: var(--violet-deep); color: #fff; text-decoration: none; }
+  .lk.off { color: var(--ink-3); background: var(--panel); font-weight: 500; }
+  .lk .st { font-family: var(--f-mono); font-size: 9.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); font-weight: 500; }
+  .lk.pri .st { color: rgba(255,255,255,.74); }
+
+  /* ---- closing band ---- */
+  .closer {
+    padding: 20px 28px; background: var(--violet-wash);
+    border-top: 1px solid color-mix(in srgb, var(--violet) 22%, transparent);
+    font-family: var(--f-mono); font-size: clamp(.92rem, 2vw, 1.08rem);
+    letter-spacing: .06em; font-weight: 600; color: var(--violet-deep); text-align: center;
+  }
+
+  /* ---- origin note ---- */
+  .origin {
+    display: flex; flex-wrap: wrap; align-items: baseline; gap: 5px 9px;
+    padding: 11px 15px; border-radius: 10px;
+    background: var(--mint-wash); border: 1px solid var(--mint-line);
+    font-size: .845rem; color: var(--mint);
+  }
+  .origin b { font-weight: 700; }
+
+  /* ---- bullets ---- */
+  ul.duty { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 9px; }
+  ul.duty li { position: relative; padding-left: 15px; font-size: .93rem; color: var(--ink-2); line-height: 1.6; }
+  ul.duty li::before {
+    content: ""; position: absolute; left: 0; top: .62em;
+    width: 5px; height: 5px; border-radius: 50%; background: var(--violet);
+  }
+  ul.duty li b { color: var(--ink); font-weight: 700; }
+  ul.duty li .why { display: block; color: var(--ink-3); font-size: .855rem; margin-top: 2px; }
+
+  /* ---- experience / skills ---- */
+  .exp { border: 1px solid var(--line); border-radius: 16px; background: var(--card); padding: 26px 28px; display: flex; flex-direction: column; gap: 15px; }
+  @media (max-width: 640px) { .exp { padding: 22px 20px; } }
+  .exp-top { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; }
+  .exp-top .per { font-family: var(--f-mono); font-size: 11.5px; letter-spacing: .08em; color: var(--ink-3); }
+  .tags { display: flex; flex-wrap: wrap; gap: 7px; }
+  .tag { font-size: .82rem; padding: 6px 12px; border-radius: 8px; background: var(--panel); color: var(--ink-2); border: 1px solid var(--line); }
+
+  .skills { display: grid; gap: 11px; }
+  @media (min-width: 700px) { .skills { grid-template-columns: repeat(3, 1fr); } }
+  .sk { border: 1px solid var(--line); border-radius: 14px; background: var(--card); padding: 19px; display: flex; flex-direction: column; gap: 10px; }
+  .sk h4 { font-family: var(--f-mono); font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--violet-deep); }
+  .sk p { font-size: .87rem; color: var(--ink-2); line-height: 1.64; }
+
+  footer { margin-top: 72px; padding-top: 20px; border-top: 2px solid var(--ink); display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: baseline; }
+
+  .printhint {
+    margin-top: 28px; padding: 13px 16px; border-radius: 10px;
+    background: var(--panel); border: 1px dashed var(--line);
+    font-size: .82rem; color: var(--ink-3);
+  }
+  .printhint b { color: var(--ink-2); font-weight: 700; }
+
+  /* ================= 인쇄 ================= */
+  @page { size: A4 portrait; margin: 12mm 12mm; }
+
+  @media print {
+    :root, :root[data-theme="dark"], :root:not([data-theme="light"]) {
+      --ground: #FFFFFF; --panel: #FFFFFF; --card: #FFFFFF;
+      --ink: #111318; --ink-2: #3C4048; --ink-3: #6B7079;
+      --line: #C7CBD2; --line-2: #DEE1E6;
+      --violet: #5A4FD0; --violet-deep: #4A3FBF; --violet-wash: #F1EFFC;
+      --mint: #1F7A72; --mint-line: #9AD5CD; --mint-wash: #EEF9F7;
+      --gold: #7A5D18; --gold-line: #E1C378; --gold-wash: #FCF5E2;
+    }
+
+    body { background: #fff; font-size: 9.2pt; line-height: 1.48; letter-spacing: -.012em; }
+    .page { max-width: none; padding: 0; }
+    .noprint, .printhint { display: none !important; }
+
+    .mast { padding: 0 0 7pt; border-bottom-width: 1.5pt; }
+    .intro { padding: 13pt 0 0; gap: 9pt; }
+    section { padding-top: 15pt; }
+    .shead { margin-bottom: 8pt; gap: 4pt; }
+    .proj-top { padding: 11pt 13pt; gap: 8pt; }
+    .specs { padding-top: 8pt; }
+    .row { padding: 9pt 13pt; gap: 3pt 13pt; grid-template-columns: 76pt minmax(0,1fr); }
+    .row > .val { gap: 7pt; }
+    .bs { padding: 8pt 10pt; gap: 2pt 10pt; }
+    .exp { padding: 11pt 13pt; gap: 7pt; }
+    .sk { padding: 10pt 11pt; gap: 5pt; }
+    .closer { padding: 9pt 13pt; font-size: 9pt; }
+    footer { margin-top: 15pt; padding-top: 9pt; border-top-width: 1.5pt; }
+
+    h1 { font-size: 20pt; }
+    h2 { font-size: 15pt; }
+    h3 { font-size: 10.5pt; }
+    .intro .lede { font-size: 9.4pt; }
+    .proj-claim { font-size: 11.5pt; }
+    .proj-top .sub { font-size: 9.4pt; }
+    .qq { font-size: 10pt; padding-left: 10pt; border-left-width: 2pt; }
+    .big { font-size: 11pt; }
+    .small { font-size: 8.6pt; }
+    .tiny { font-size: 7.6pt; }
+    .bs .bt { font-size: 9.4pt; }
+    .bs .bd { font-size: 8.5pt; }
+    ul.duty li { font-size: 8.7pt; }
+    ul.duty li .why { font-size: 8pt; }
+    .hl p { font-size: 8.9pt; }
+    .hl p.sub { font-size: 8.4pt; }
+
+    .proj, .exp, .sk, .row, .kv, .hl, .bs { break-inside: avoid; }
+    section { break-inside: avoid-page; }
+    h1, h2, h3, h4 { break-after: avoid; }
+
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+    /* 종이에서도 주소를 알 수 있게. 버튼은 짧은 표기를 따로 준다 */
+    a[href^="http"]:not(.lk)::after {
+      content: " (" attr(href) ")";
+      font-family: var(--f-mono); font-size: 6.8pt; color: var(--ink-3); font-weight: 400;
+      letter-spacing: 0; word-break: break-all;
+    }
+    .lk[data-print]::after {
+      content: " " attr(data-print);
+      font-family: var(--f-mono); font-size: 6.6pt; color: var(--ink-3); font-weight: 400;
+      letter-spacing: 0; word-break: break-all;
+    }
+    .lk { border-width: .75pt; padding: 5pt 8pt; font-size: 8.4pt; }
+    .lk.pri { background: var(--violet-wash) !important; color: var(--violet-deep) !important; border-color: var(--violet) !important; }
+    .lk.pri .st { color: var(--ink-3) !important; }
+  }
+</style>
+
+<div class="page">
+
+  <div class="mast">
+    <span class="nm">송채림</span>
+    <span>서비스 기획 · AI 기반 MVP 개발</span>
+    <span class="gap"></span>
+    <span>Portfolio 2026</span>
+  </div>
+
+  <!-- ============== INTRO ============== -->
+  <div class="intro">
+    <p class="kicker">Service Planner</p>
+    <h1>아이디어 하나를, AI로 실제 작동하는 서비스까지 만듭니다.</h1>
+    <p class="lede">직접 만든 제품을 팔 공간이 없다는 불편에서 시작해, 같은 문제를 겪을 다른 창작자를 가설로 세우고 서비스로 만들었습니다. 기획서에서 멈추지 않고 생성형 AI를 개발 파트너로 써서 눌러 볼 수 있는 웹 MVP까지 만듭니다.</p>
+
+    <div class="chips">
+      <span class="chip">서비스 기획</span>
+      <span class="chip">UX / UI</span>
+      <span class="chip">AI 개발</span>
+      <span class="chip">MVP 구현</span>
+      <span class="chip">수요 검증</span>
+    </div>
+    <div class="chips">
+      <span class="chip n">ChatGPT</span>
+      <span class="chip n">Claude Code</span>
+      <span class="chip n">HTML / CSS / JavaScript</span>
+      <span class="chip n">Google Forms</span>
+      <span class="chip n">CapCut</span>
+    </div>
+  </div>
+
+  <!-- ============== PROJECT 01 ============== -->
+  <section>
+    <div class="shead">
+      <p class="kicker">Project 01</p>
+    </div>
+
+    <div class="proj">
+      <div class="proj-top">
+        <h2>POP-IN</h2>
+        <p class="proj-claim">아이디어 하나를, AI로 실제 작동하는 서비스까지 만들었습니다.</p>
+        <p class="sub">전주형 청년 팝업 유휴공간 매칭 플랫폼</p>
+
+        <div class="tagrow">
+          <span class="tg">서비스 기획</span>
+          <span class="tg">UX/UI</span>
+          <span class="tg">AI 개발</span>
+          <span class="tg">MVP 구현</span>
+          <span class="tg">수요 검증</span>
+        </div>
+
+        <div class="specs">
+          <p class="spec"><b>기간</b><span>2026.08</span></p>
+          <p class="spec"><b>역할</b><span>서비스 기획 · UX/UI · AI 기반 MVP 개발</span></p>
+          <p class="spec"><b>Tools</b><span>ChatGPT · Claude Code · HTML/CSS/JavaScript · Google Forms</span></p>
+        </div>
+      </div>
+
+      <div class="proj-body">
+
+        <div class="row">
+          <div class="lbl">문제 발견</div>
+          <div class="val">
+            <p class="qq">"내가 팔고 싶다면, 다른 창작자도 팔고 싶지 않을까?"</p>
+            <p class="small">코바늘 제품을 만들어 판매하고 싶었지만 <b class="k">처음부터 매장을 임대하기엔 부담스럽고, 짧게 제품을 판매하며 고객 반응을 확인할 공간은 찾기 어려웠습니다.</b></p>
+            <p class="small">여기서 질문을 하나 던졌습니다.</p>
+            <p class="qq two">"이게 나만의 문제일까?"</p>
+            <p class="small">코바늘뿐 아니라 키링과 엽서, 액세서리 등 직접 만든 제품을 판매하는 청년 창작자도 같은 문제를 겪을 것이라는 가설을 세우고, <b class="k">청년 창작자와 지역 유휴공간을 연결하는 POP-IN</b>을 기획했습니다.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="lbl">만든 과정</div>
+          <div class="val">
+            <div class="bsteps">
+              <div class="bs">
+                <span class="bn">01</span>
+                <span class="bt">문제를 서비스로 설계</span>
+                <span class="bd">개인 경험 → 타깃 가설 → 경쟁 서비스 분석 → PRD → 핵심 기능 → User Flow</span>
+              </div>
+              <div class="bs">
+                <span class="bn">02</span>
+                <span class="bt">AI로 직접 개발</span>
+                <span class="bd">ChatGPT로 요구사항을 구조화하고 <b>Claude Code로 웹 MVP를 구현</b>했습니다. 결과물을 직접 테스트하며 픽셀·비율·정렬 단위로 수정 명령을 내려 UI를 반복 개선했습니다.</span>
+              </div>
+              <div class="bs">
+                <span class="bn">03</span>
+                <span class="bt">아이디어에서 끝내지 않고 검증까지</span>
+                <span class="bd">Google Forms로 수요자·공급자별 설문을 설계해 <b>실제 시장 수요를 확인할 수 있는 검증 구조</b>까지 만들었습니다.</span>
+              </div>
+            </div>
+
+            <div class="hl">
+              <span class="hk">AI에게 전달하는 법</span>
+              <p class="sub">"더 예쁘게"는 AI가 실행할 수 없습니다. 원하는 결과가 나올 때까지 기준을 숫자로 바꿔서 다시 지시했습니다.</p>
+              <div class="ex">
+                <span class="bad">더 예쁘게</span>
+                <span class="arw">→</span>
+                <span>카드 간격 24px</span>
+                <span>썸네일 4:3 고정</span>
+                <span>CTA를 카드 하단 정렬</span>
+                <span>가격을 제목보다 크게</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="lbl">결과</div>
+          <div class="val">
+            <p class="big">약 10개 화면의 인터랙티브 웹 MVP 구현</p>
+
+            <div class="pipe">
+              <span class="pn st">공간 탐색</span><span class="parrow">→</span>
+              <span class="pn st">상세 확인</span><span class="parrow">→</span>
+              <span class="pn st">팝업 신청</span><span class="parrow">→</span>
+              <span class="pn st">공급자 승인</span>
+            </div>
+
+            <p class="small">기획서만 만든 것이 아니라 아래 전 과정을 직접 수행했습니다.</p>
+
+            <div class="pipe">
+              <span class="pn">문제 발견</span><span class="parrow">→</span>
+              <span class="pn">서비스 기획</span><span class="parrow">→</span>
+              <span class="pn">UX/UI</span><span class="parrow">→</span>
+              <span class="pn key">AI 개발</span><span class="parrow">→</span>
+              <span class="pn">MVP</span><span class="parrow">→</span>
+              <span class="pn">수요 검증 설계</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="lbl">배운 점</div>
+          <div class="val">
+            <p class="big" style="color:var(--ink);max-width:44ch">AI를 잘 쓰는 것은 좋은 답을 받는 것이 아니라, 원하는 결과가 나올 때까지 정확하게 지시하고 판단하는 능력이었습니다.</p>
+            <p class="small">추상적인 아이디어를 개발 가능한 요구사항으로 바꾸고, AI와 반복적으로 구현하고 수정하면서 <b class="k">기획자가 AI로 아이디어를 실제 제품으로 만드는 방법</b>을 경험했습니다.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="lbl">Key Visual</div>
+          <div class="val">
+            <div class="kvs">
+              <div class="kv">
+                <div class="kvframe">Image 01</div>
+                <span class="kvn">01</span>
+                <span class="kvt">내가 만든 코바늘 제품<br>문제 발견</span>
+              </div>
+              <div class="kv">
+                <div class="kvframe">Image 02</div>
+                <span class="kvn">02</span>
+                <span class="kvt">POP-IN 메인 · 공간 탐색<br>신청 화면</span>
+              </div>
+              <div class="kv">
+                <div class="kvframe">Image 03</div>
+                <span class="kvn">03</span>
+                <span class="kvt">Claude Code 명령<br>UI Before &amp; After</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="lbl">Link</div>
+          <div class="val">
+            <div class="lks">
+              <a class="lk pri" href="https://claude.ai/code/artifact/f2e4125f-32d7-4a45-adf1-9288a4776df0" target="_blank" rel="noopener" data-print="claude.ai/code/artifact/f2e4125f"><span class="st">Platform</span> POP-IN 플랫폼 바로 보기</a>
+              <a class="lk" href="https://geunnit.vercel.app" target="_blank" rel="noopener" data-print="geunnit.vercel.app"><span class="st">MVP</span> Web MVP</a>
+              <a class="lk" href="https://docs.google.com/forms/d/e/1FAIpQLScsKQbEKOjPUuzLXy6yT7dycBERK7deWTIp-tDdijNIdZwzWA/viewform" target="_blank" rel="noopener" data-print="Google Forms"><span class="st">Survey</span> 수요조사 폼</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <p class="closer">From Idea to MVP with AI</p>
+    </div>
+  </section>
+
+  <!-- ============== PROJECT 02 ============== -->
+  <section>
+    <div class="shead">
+      <p class="kicker">Project 02</p>
+    </div>
+
+    <div class="proj">
+      <div class="proj-top">
+        <h2>Crochet Content</h2>
+        <p class="sub">코바늘 제작 과정을 디지털 콘텐츠로 구조화</p>
+
+        <div class="specs">
+          <p class="spec"><b>구분</b><span>Personal Project</span></p>
+          <p class="spec"><b>역할</b><span>콘텐츠 기획 · 제작 · AI 활용</span></p>
+          <p class="spec"><b>Tools</b><span>ChatGPT · Claude Code · CapCut</span></p>
+        </div>
+
+        <p class="origin"><b>POP-IN의 출발점.</b> 이 제품을 팔 공간을 찾다가 Project 01이 나왔습니다.</p>
+      </div>
+
+      <div class="proj-body">
+
+        <div class="row">
+          <div class="lbl">Problem</div>
+          <div class="val">
+            <p class="small">손으로 만든 과정은 머릿속과 사진에만 남습니다. 다른 사람이 따라 하려면 재료와 코 수, 단별 순서가 <b class="k">정해진 형식으로 정리돼</b> 있어야 합니다.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="lbl">What I Did</div>
+          <div class="val">
+            <ul class="duty">
+              <li>제작 과정 및 <b>도안 정보 구조화</b>
+                <span class="why">재료와 도구, 단별 과정, 코 수와 뜨개 방식, 완성 크기, 기호, 주의사항으로 항목을 나눴습니다.</span>
+              </li>
+              <li><b>웹 기반 디지털 도안 제작</b></li>
+              <li>영상 촬영 및 <b>단계별 콘텐츠 구성</b></li>
+              <li>AI를 활용한 <b>자막·콘텐츠 제작 Workflow 실험</b></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="lbl">Result</div>
+          <div class="val">
+            <div class="outs">
+              <span class="out v">디지털 코바늘 도안</span>
+              <span class="out">영상 콘텐츠</span>
+            </div>
+            <p class="tiny">AI가 콘텐츠를 대신 만드는 게 아니라, 반복 작업을 줄여서 제작자가 구조와 품질 판단에 집중하게 하는 쪽으로 썼습니다.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="lbl">Link</div>
+          <div class="val">
+            <div class="lks">
+              <span class="lk off"><span class="st">Pattern</span> Digital Pattern</span>
+              <span class="lk off"><span class="st">Video</span> 영상</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== EXPERIENCE ============== -->
+  <section>
+    <div class="shead">
+      <p class="kicker">Experience</p>
+      <h2>전주대학교 교육조교</h2>
+    </div>
+
+    <div class="exp">
+      <div class="exp-top">
+        <h3>학사·행정 및 교육 프로그램 운영</h3>
+        <span class="per">2024.08 ~ 2026.07</span>
+      </div>
+      <p class="small">교수와 학생 등 다양한 이해관계자의 요구사항을 정리하고 실제 업무로 구체화했습니다. 정리되지 않은 요구가 들어왔을 때 무엇부터 처리할지 정해 결과물까지 연결하는 일을 반복했습니다.</p>
+      <div class="tags">
+        <span class="tag">프로젝트·행사 운영</span>
+        <span class="tag">문서 구조화</span>
+        <span class="tag">이해관계자 커뮤니케이션</span>
+        <span class="tag">업무 조율</span>
+        <span class="tag">우선순위 판단</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== SKILLS ============== -->
+  <section>
+    <div class="shead">
+      <p class="kicker">Skills</p>
+      <h2>할 수 있는 것</h2>
+    </div>
+
+    <div class="skills">
+      <div class="sk">
+        <h4>Planning</h4>
+        <p>겪은 불편을 사용자 문제와 타깃 가설로 바꿉니다. 경쟁 서비스를 분석해 PRD와 핵심 기능을 정의하고, 무엇을 빼는지 근거를 남깁니다.</p>
+      </div>
+      <div class="sk">
+        <h4>UX / UI</h4>
+        <p>사용자 Flow와 화면 구조를 설계합니다. 실제 서비스를 레퍼런스로 분석해 정보 구조와 시각 위계를 다시 잡습니다.</p>
+      </div>
+      <div class="sk">
+        <h4>AI Development</h4>
+        <p>추상적인 요청을 레이아웃·픽셀·비율·정렬 기준의 명세로 바꿔 전달합니다. Claude Code로 구현하고 브라우저에서 직접 테스트합니다.</p>
+      </div>
+      <div class="sk">
+        <h4>Validation</h4>
+        <p>Google Forms로 수요자와 공급자 양쪽 설문을 설계하고 배포합니다. 돌아온 응답을 정리해 기획의 가정과 맞는지 확인합니다.</p>
+      </div>
+      <div class="sk">
+        <h4>Creative</h4>
+        <p>브랜드 콘셉트와 슬로건, 컬러 시스템을 정합니다. 레퍼런스를 비교해 방향을 잡고 생성 결과물을 평가합니다.</p>
+      </div>
+      <div class="sk">
+        <h4>Content</h4>
+        <p>제작 과정을 따라 할 수 있는 형식으로 구조화합니다. 웹 도안과 영상 콘텐츠를 기획하고 만듭니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div>
+      <p class="kicker" style="color:var(--ink-3)">Contact</p>
+      <p style="margin-top:5px"><a href="mailto:rim0409@naver.com">rim0409@naver.com</a></p>
+    </div>
+    <span class="gap"></span>
+    <p class="tiny" style="max-width:32ch">POP-IN은 멋쟁이사자처럼 CAMPUS AX-TON 팀 프로젝트입니다.</p>
+  </footer>
+
+  <p class="printhint">
+    <b>인쇄 · PDF로 저장하기</b>. 브라우저에서 <b>Ctrl</b>+<b>P</b>를 누르고 배경 그래픽 옵션을 켜면 색과 표가 그대로 나옵니다.
+    A4 세로 기준이고, 카드가 페이지 경계에서 잘리지 않게 잡아뒀습니다. 이 안내문은 인쇄에서 빠집니다.
+  </p>
+
+</div>
+
+
+<style>
+/* ---- PDF 출력 보정: 원본의 section 단위 페이지 고정이 A4보다 큰 카드와 충돌해 빈 페이지를 만들던 문제 수정 ---- */
+@media print {
+  section { break-inside: auto; padding-top: 13pt; }
+  .proj { break-inside: auto; }
+  .proj-top { break-inside: avoid; break-after: avoid; }
+  .row, .bs, .exp, .sk, .kv, .hl, .specs, .bsteps { break-inside: avoid; }
+  .shead { break-inside: avoid; break-after: avoid; }
+  .closer { break-before: avoid; }
+  footer { break-inside: avoid; }
+  .kvs { break-inside: avoid; }
+}
+</style>
+</body></html>
