@@ -429,7 +429,7 @@
 
   <div class="intro">
     <p class="kicker">Service Planner</p>
-    <h1>내 경험에서 시작하는<br>슬기로운 기획자</h1>
+    <h1><em>‘내 경험’</em>에서 시작하는<br>슬기로운 기획자</h1>
     <p class="lede">취미로 하던 코바늘을 브랜딩해 홍보해 보려다 팔 공간이 없다는 문제를 만났고, 같은 문제를 겪을 다른 창작자를 가설로 세워 서비스로 만들었습니다. 기획서에서 멈추지 않고 생성형 AI를 개발 파트너로 써서 눌러 볼 수 있는 웹 MVP까지 만듭니다.</p>
 
     <div class="chips">
@@ -635,6 +635,8 @@
 
 <style>
 /* ---- PDF 출력 보정: 원본의 section 단위 페이지 고정이 A4보다 큰 카드와 충돌해 빈 페이지를 만들던 문제 수정 ---- */
+h1 em { font-style: normal; color: var(--violet-deep); }
+
 @media print {
   section { break-inside: auto; padding-top: 13pt; }
   .proj { break-inside: auto; }
